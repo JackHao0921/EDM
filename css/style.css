@@ -1,0 +1,639 @@
+/* 整體設定 */
+html,
+body {
+    height: 100%;
+    background-color: #C7E4FF;
+    font-family: 'Noto Sans';
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 字體設定 */
+h1,
+.contactUsH1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+}
+
+h3 {
+    font-size: 12px;
+    font-weight: lighter;
+    margin: 0;
+}
+
+h4 {
+    font-size: 8px;
+    font-weight: medium;
+    margin: 0;
+}
+
+a {
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: all 0.3s
+}
+
+a:hover {
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+}
+
+.wrapper {
+    max-width: 600px;
+    /* min-height: 2000px; */
+    margin: 0 auto;
+    padding-bottom: 100px;
+
+}
+
+/*最上層LOGO*/
+.headLogo {
+    padding: 5%;
+    display: block;
+    max-width: 142px;
+    margin: 0 auto;
+}
+
+.headLogo img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* 電子報 */
+.contentWrapper {
+    background: #FDCD00;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+/* ---------- Banner ---------- */
+.bannerWrapper {
+    background-image: url("../img/kv-bg.jpg");
+    max-width: 600px;
+    min-height: 405px;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+
+    position: relative;
+}
+
+.bannerWrapper .yellow_m {
+    display: none;
+}
+
+/* 左邊文章 */
+.bannerLeft {
+    max-width: 37.5%;
+    padding-left: 7.5%;
+    padding-top: 7.5%;
+    padding-bottom: 12%;
+    /* background: red; */
+}
+
+
+
+.bannerLeft .appIcon,
+.bannerTitle_M .appIcon {
+    max-height: 40px;
+    max-width: 40px;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.bannerLeft .bannerWord,
+.bannerTitle_M .bannerWord {
+    color: white;
+    padding-bottom: 17px;
+}
+
+.bannerTitle_M {
+    display: none;
+}
+
+.bannerLeft .bannerWord:nth-child(2) {
+    padding: 0;
+}
+
+.bannerLeft .bannerWord:nth-child(3) {
+    font-weight: lighter;
+}
+
+.bannerLeft .bannerWord:nth-child(4) {
+    font-weight: lighter;
+}
+
+/* 下載圖示 */
+.bannerLeft .downloadIcons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.downloadIcons .downloadIcon {
+    /* max-height: 21px;
+    max-width: 72px; */
+    background-color: white;
+    color: #F5A903;
+    border-radius: 5px;
+    /* margin-right: 10px; */
+
+}
+
+.downloadIcon .downloadLink {
+    display: block;
+    line-height: 0;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+
+    background-position: center center;
+    background-size: cover;
+}
+
+.downloadIcon .googleIcon {
+    background-image: url('../img/download_google.svg');
+}
+
+.downloadIcon .appleIcon {
+    background-image: url('../img/download_apple.svg');
+
+}
+
+.downloadIcon .apkIcon {
+    background-image: url('../img/download_apk.svg');
+    flex-basis: 100%;
+
+}
+
+.downloadLink img {
+    border-radius: 5px;
+    transition: all 0.3s
+}
+
+.downloadLink:hover {
+    transform: scale(1.1);
+}
+
+/* 右邊圖片 */
+.bannerRight {
+    width: 47.5%;
+    position: relative;
+}
+
+.bannerRight .signageIMG {
+    max-width: 100px;
+
+    position: absolute;
+    top: 16%;
+    left: 72%;
+
+}
+
+.bannerRight .signImg_m {
+    display: none;
+}
+
+.bannerRight .kvBgYellow_m {
+    display: none;
+}
+
+.bannerRight .hand {
+    max-height: 430px;
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    z-index: 1;
+
+    transition: all 0.3s;
+
+}
+
+.bannerRight .hand:hover {
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 1));
+}
+
+.bannerRight .handML {
+    display: none;
+}
+
+/* 裝飾斜角 */
+.vector1 {
+    z-index: 10;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    max-height: 50px;
+    width: 100%;
+    background-image: url(../img/Vector1.png);
+}
+
+.vector2 {
+    z-index: 10;
+
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 11.2%;
+    width: 100%;
+}
+
+.vectorImg {
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------- 電子報內文 ---------- */
+.appContentWrapper {
+    width: 100%;
+}
+
+.appContentWrapper .content {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.appContentWrapper .content:nth-child(3) {
+    background-color: #FFFBF0;
+}
+
+.appContentWrapper .content:nth-child(4) {
+    background-color: #FFF7DE;
+}
+
+.appContentWrapper .contentTitleBox {
+    background-color: white;
+    padding: 0;
+}
+
+.contentTitleBox .contentTitle {
+    padding-left: 7.5%;
+    padding-bottom: 4%;
+}
+
+.appContentWrapper .function {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.functionBox .functionImg {
+
+    flex: 0 0 auto;
+    width: 196px;
+    padding-left: 7.5%;
+    padding-right: 3%;
+}
+
+.functionImg img {
+    width: 100%;
+    transition: all 0.3s
+}
+
+.functionImg img:hover {
+    transform: scale(1.1);
+}
+
+.function .functionDescBox {
+    padding-right: 7.5%;
+    display: flex;
+}
+
+.function .functionBox {
+    display: flex;
+    flex-direction: row;
+}
+
+.functionDescBox .contentDesc {
+    color: #555555;
+}
+
+.functionDescBox .SubtitleImgBox {
+    /* width: 25%; */
+    padding-right: 5%;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-image: url(../img/footerBG.png);
+    background-position: center center;
+    background-size: cover;
+    padding-bottom: 3%;
+}
+
+footer .footerWord {
+    color: white;
+    font-weight: lighter;
+}
+
+footer .inforBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inforBox .inforLinkBox {
+    display: flex;
+    flex-direction: row;
+}
+
+/* footer 左邊 */
+.inforBox .footerLeft {
+    padding-left: 7.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footerLeft .footerLogo {
+    max-height: 35px;
+    max-width: 142px;
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+.contactUs_M {
+    display: none;
+}
+
+/* footer右邊 */
+.footerRight {
+    padding-right: 7.5%;
+}
+
+.vector3 {
+    position: relative;
+}
+
+.vector3 .contactUs {
+    position: absolute;
+    top: 0px;
+    right: 7.5%;
+
+    background-color: white;
+    color: #F5A903;
+    border-radius: 30px;
+    min-width: 150px;
+    min-height: 40px;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+    transition: all 0.3s
+}
+
+.contactUs:hover {
+    transform: scale(1.1);
+}
+
+.contactUs .contactUsH1 {
+    color: #F5A903;
+    text-decoration: none;
+    line-height: 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footerRight .contactIcons {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 15%;
+    justify-content: space-between;
+}
+
+.contactIcons .contactIcon {
+    transition: all 0.3s
+}
+
+.contactIcons .contactIcon:hover {
+    transform: scale(1.1);
+}
+
+.contactLink img {
+    max-height: 30px;
+    max-width: 30px;
+}
+
+/* 414以下使用 */
+.footerRight .inforLinkBox_M {
+    display: none;
+}
+
+/* ---------- RWD ---------- */
+@media (max-width: 570px) and (min-width: 415px) {
+
+    /* banner */
+    .bannerRight {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .bannerRight .hand {
+        content: url('../img/hand_en_ml.png');
+        display: block;
+        margin: auto;
+        left: unset;
+    }
+}
+
+@media (max-width: 515px) {
+
+    /* appContent */
+    .vector3 .contactUs {
+        display: none;
+    }
+
+    .contactUs_M {
+        margin: 10px auto;
+        display: block;
+        background-color: white;
+        color: #F5A903;
+        border-radius: 30px;
+        min-width: 150px;
+        min-height: 40px;
+        filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.2));
+    }
+
+    /* footer */
+    footer {
+        padding-bottom: 0;
+    }
+
+    footer .contactIcons {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+
+    footer .inforBox {
+        flex-direction: column;
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+        padding-bottom: 7.5%;
+    }
+
+    .inforBox .footerLeft {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .footerLeft .contactUs:hover {
+        transform: scale(1.1);
+    }
+
+    .footerLeftDescBox,
+    .footerDesc,
+    .inforLinkBox,
+    .footerDescLink {
+        display: none;
+    }
+
+    .inforBox .footerRight {
+        padding: 0;
+    }
+
+    .footerRight .contactIcons {
+        padding: 0;
+        margin: 0 auto;
+        min-width: 200px;
+    }
+
+    .footerRight .inforLinkBox_M {
+        display: flex;
+        flex-direction: column;
+        height: 10%;
+    }
+
+    .footerRight .inforLinkBox_M .footerWord_M {
+        display: block;
+    }
+
+    .footerRight .inforDesc_M1,
+    .inforDesc_M2,
+    .inforDesc_M3,
+    .inforDesc_M4 {
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    .footerRight .inforDesc_M1 {
+        padding-bottom: 5px;
+    }
+
+    .footerRight .inforDesc_M2 {
+        padding-bottom: 5px;
+    }
+
+    .inforDesc_M1 h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 414px) {
+
+    /* banner */
+    .bannerWrapper {
+        background-image: url('../img/kv-bg-m-01.jpg');
+        flex-direction: column;
+    }
+
+    .bannerWrapper .yellow_m {
+        display: block;
+        position: absolute;
+        top: 0;
+    }
+
+    .bannerWrapper .bannerLeft {
+        background-image: url('../img/kv-bg-m-02.png');
+        max-width: none;
+        padding-right: 7.5%;
+        padding-bottom: 7.5%;
+    }
+
+    .bannerWrapper .bannerRight {
+        width: 100%;
+    }
+
+    .bannerRight .kvBgYellow_m {
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+
+    .bannerRight .hand {
+        display: block;
+        position: sticky;
+        max-width: none;
+        width: 80%;
+        margin: 0 auto;
+        transition: all 0.3s;
+    }
+
+    /* appContent */
+    .content .functionBox {
+        flex-direction: column;
+    }
+
+    .functionDescBox {
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+
+    .functionBox .functionImg {
+        padding-right: 7.5%;
+        margin: 0 auto;
+        width: 80%;
+    }
+}
+
+@media (max-width: 300px) {
+
+    /* banner */
+    .bannerLeft .downloadIcons {
+        flex-direction: column;
+
+    }
+
+    .downloadIcons .downloadIcon {
+        max-width: 80px;
+        /* margin-bottom: 10px; */
+    }
+}
+
+@media (max-width: 280px) {
+
+    /* footer */
+    .inforDesc_M2 {
+        flex-direction: column;
+    }
+
+    .inforDesc_M2 h3 {
+        text-align: center;
+    }
+
+    .inforDesc_M2 .footerWord_M:nth-child(2) {
+        display: none;
+
+    }
+}
